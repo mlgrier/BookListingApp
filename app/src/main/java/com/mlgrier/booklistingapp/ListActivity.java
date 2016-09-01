@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -20,6 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -32,7 +34,18 @@ public class ListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String userBookSearchInfo = intent.getStringExtra("userBook2");
 
-        Toast.makeText(getApplicationContext(), userBookSearchInfo, Toast.LENGTH_LONG).show();
+        // Create a fake list of earthquakes.
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+
+        // Find a reference to the {@link ListView} in the layout
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+        // Create a new {@link ArrayAdapter} of earthquakes
+        final EarthquakeAdapter adapter = new EarthquakeAdapter(EarthquakeActivity.this, earthquakes);
+
+        // Set the adapter on the {@link ListView}
+        // so the list can be populated in the user interface
+        earthquakeListView.setAdapter(adapter);
 
     }
 
