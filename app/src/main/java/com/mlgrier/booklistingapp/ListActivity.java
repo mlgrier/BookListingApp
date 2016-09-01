@@ -11,7 +11,8 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
+        //collecting the user entered information and storing it,
+        //to be used in this activity as userBookSearchInfo
         Intent intent = getIntent();
         String userBookSearchInfo = intent.getStringExtra("userBook2");
 
