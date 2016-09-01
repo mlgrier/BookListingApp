@@ -22,7 +22,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/bookKeyword"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/bookSearchText"
         android:layout_centerHorizontal="true"
@@ -31,9 +31,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Books"
-        android:id="@+id/bookSearchBtn"
-        android:layout_below="@+id/editText"
+        android:text="Get List"
+        android:id="@+id/getListBtn"
+        android:layout_below="@+id/bookKeyword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="56dp" />
 </RelativeLayout>
