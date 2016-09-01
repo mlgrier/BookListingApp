@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText userInput = (EditText) findViewById(R.id.bookKeyword);
                 String userBookSearch = userInput.getText().toString();
+                Intent i = new Intent(MainActivity.this, ListActivity.class);
+                i.putExtra(userBook2, userBookSearch);
                 Intent listIntent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(listIntent);
             }

@@ -11,6 +11,8 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        Toast.makeText(getApplicationContext(), "The New Activity", Toast.LENGTH_LONG).show();
+        String userBookSearchInfo = getIntent().getStringExtra("userBook2");
+
+        Toast.makeText(getApplicationContext(), userBookSearchInfo, Toast.LENGTH_LONG).show();
     }
 }
