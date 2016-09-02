@@ -17,7 +17,7 @@ import java.util.Date;
 /**
  * Created by mlgrier on 9/1/16.
  */
-public class BookAdapter extends ArrayAdapter<Earthquake> {
+public class BookAdapter extends ArrayAdapter<Book> {
 
 
 
@@ -27,7 +27,7 @@ public class BookAdapter extends ArrayAdapter<Earthquake> {
     // context is the current context (i.e. Activity) that the adapter is being created in
     // detail is the list of detail to be displayed.
     // colorResourceId is the resource ID for the background color for this list of detail
-    public EarthquakeAdapter(Activity context, ArrayList<Earthquake> earth) {
+    public BookAdapter(Activity context, ArrayList<Book> earth) {
         super(context, 0, earth);
 
     }
@@ -40,18 +40,18 @@ public class BookAdapter extends ArrayAdapter<Earthquake> {
         //otherwise, if convertiView is null, then inflate a new list item layout.
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.activity_list, parent, false);
 
         }
 
         //find the earthquake at the give position in the list of earthquakes
-        Earthquake currentEarthquake = getItem(position);
+        Book currentBook = getItem(position);
 
         //Find the TextView with view ID magnitude
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
 
         //format the magnitude to show 1 decimal place
-        String formattedMagnitude = formatMagnitude(currentEarthquake.getMagnitude());
+        String formattedMagnitude = formatMagnitude(currentBook.getMagnitude());
 
         //display the magnitude of the current earthquake in the TextView
         magnitudeView.setText(formattedMagnitude);
@@ -62,7 +62,7 @@ public class BookAdapter extends ArrayAdapter<Earthquake> {
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
 
         //get the appropriate background color based on the current earthquake magnitude
-        int magnitudeColor = getMagnitudeColor(currentEarthquake.getMagnitude());
+        int magnitudeColor = getMagnitudeColor(currentBook.getMagnitude());
 
         //set the color on the magnitude circle
         magnitudeCircle.setColor(magnitudeColor);
@@ -70,7 +70,7 @@ public class BookAdapter extends ArrayAdapter<Earthquake> {
 
         //Get the original location string from the Earthquake object,
         //which can be in the format of "5km N of Cairo, Egypt" or "Pacific-Antrarctic Ridge"
-        String originalLocation = currentEarthquake.getQuakeLocation();
+        String originalLocation = currentBook.getQuakeLocation();
 
         //If the original location string (i.e. "5km N of Cairo, Egypt") contains
         //a primary location (Cairo, Egypt) and a location offset (5km N of that city)
@@ -111,7 +111,7 @@ public class BookAdapter extends ArrayAdapter<Earthquake> {
         locationOffsetView.setText(locationOffset);
 
         //create a new date object from the time in milliseconds of the earthquake
-        Date dateObject = new Date(currentEarthquake.getTimeInMilliseconds());
+        Date dateObject = new Date(currentBook.getTimeInMilliseconds());
 
         //Find the TextView with view ID date
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);

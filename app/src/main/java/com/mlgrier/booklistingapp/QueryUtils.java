@@ -34,13 +34,13 @@ public final class QueryUtils {
     }
 
     /**
-     * Return a list of {@link Earthquake} objects that has been built up from
+     * Return a list of {@link Book} objects that has been built up from
      * parsing a JSON response.
      */
-    public static ArrayList<Earthquake> extractEarthquakes() {
+    public static ArrayList<Book> extractBookList() {
 
         // Create an empty ArrayList that we can start adding earthquakes to
-        ArrayList<Earthquake> earthquakes = new ArrayList<>();
+        ArrayList<Book> book = new ArrayList<>();
 
         // Try to parse the SAMPLE_JSON_RESPONSE. If there's a problem with the way the JSON
         // is formatted, a JSONException exception object will be thrown.
@@ -68,8 +68,8 @@ public final class QueryUtils {
 
                 //create a new {@link Earthquake} object with the magnitude, location, time,
                 // and url from the JSON response.
-                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
-                earthquakes.add(earthquake);
+                Book books = new Book(magnitude, location, time, url);
+                book.add(books);
             }
 
         } catch (JSONException e) {
@@ -80,7 +80,7 @@ public final class QueryUtils {
         }
 
         // Return the list of earthquakes
-        return earthquakes;
+        return book;
 
     }
 }

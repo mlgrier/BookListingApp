@@ -1,7 +1,7 @@
 package com.mlgrier.booklistingapp;
 
 /**
- * {@Event} represents an earthquake event. It holds the details
+ * {@Book} represents an earthquake event. It holds the details
  * of that event such as title (which contains magnitude and location
  * of the earthquake), as well as time, and whether or not a tsunami
  * alert was issued during the earthquake.
@@ -21,7 +21,7 @@ public class Book {
     private String mUrl;
 
 
-    public Earthquake(double magnitude, String quakeLocation, long timeInMilliseconds, String url) {
+    public Book(double magnitude, String quakeLocation, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mQuakeLocation = quakeLocation;
         mTimeInMilliseconds = timeInMilliseconds;
