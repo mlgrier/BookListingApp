@@ -15,11 +15,12 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
         //collecting the user entered information and storing it,
         //to be used in this activity as userBookSearchInfo
         Intent intent = getIntent();
         String userBookSearchInfo = intent.getStringExtra("userBook2");
+        setContentView(R.layout.activity_list);
+
 
         // Create a fake list of earthquakes.
         ArrayList<Book> books = QueryUtils.extractBookList();
