@@ -17,7 +17,7 @@ import java.util.Date;
 /**
  * Created by mlgrier on 9/1/16.
  */
-public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+public class BookAdapter extends ArrayAdapter<Earthquake> {
 
 
 

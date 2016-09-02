@@ -8,34 +8,6 @@ package com.mlgrier.booklistingapp;
  */
 public class Book {
 
-    /**
-     * Title of the earthquake event
-     */
-    public final String title;
-
-    /**
-     * Time that the earthquake happened (in milliseconds)
-     */
-    public final long time;
-
-    /**
-     * Whether or not a tsunami alert was issued (1 if it was issued, 0 if no alert was issued)
-     */
-    public final int tsunamiAlert;
-
-    /**
-     * Constructs a new {@link Book}.
-     *
-     * @param eventTitle        is the title of the earthquake event
-     * @param eventTime         is the time the earhtquake happened
-     * @param eventTsunamiAlert is whether or not a tsunami alert was issued
-     */
-    public Book(String eventTitle, long eventTime, int eventTsunamiAlert) {
-        title = eventTitle;
-        time = eventTime;
-        tsunamiAlert = eventTsunamiAlert;
-    }
-
     //Magnitude of the earthquake
     private double mMagnitude;
 
@@ -47,7 +19,6 @@ public class Book {
 
     //website URL of the earthquake
     private String mUrl;
-
 
 
     public Earthquake(double magnitude, String quakeLocation, long timeInMilliseconds, String url) {
@@ -74,5 +45,7 @@ public class Book {
     }
 
     //get the url of the earthquake
-    public String getUrl() { return mUrl; }
+    public String getUrl() {
+        return mUrl;
+    }
 }
