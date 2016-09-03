@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
 
-    private static final String API_KEY = "AIzaSyD1XEZaVzDVLpFOLL5vsGbHEQGH32klEhg";
+    private static final String API_KEY = "&key=AIzaSyD1XEZaVzDVLpFOLL5vsGbHEQGH32klEhg";
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     //Declaring userBookSearch as a String Variable
     public String userBookSearch;
