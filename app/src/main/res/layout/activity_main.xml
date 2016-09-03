@@ -16,7 +16,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/edit_text"
+            android:id="@+id/editText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -24,7 +24,7 @@
             android:hint="@string/search_hint" />
 
         <Button
-            android:id="@+id/search_books_button"
+            android:id="@+id/bookSearchBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

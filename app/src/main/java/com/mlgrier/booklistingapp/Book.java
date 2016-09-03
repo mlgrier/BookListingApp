@@ -15,7 +15,7 @@ public class Book {
     private String mCategory;
     private String mPicture;
 
-    public Book(String mRating, String mTitle, String mAuthor, double mPublisher, String mCategory, String mPicture) {
+    public Book(double mRating, String mTitle, String mAuthor, String mPublisher, String mCategory, String mPicture) {
         this.mRating = mRating;
         this.mTitle = mTitle;
         this.mAuthor = mAuthor;
@@ -23,6 +23,7 @@ public class Book {
         this.mCategory = mCategory;
         this.mPicture = mPicture;
     }
+
 
     public double getmRating() {
         return mRating;

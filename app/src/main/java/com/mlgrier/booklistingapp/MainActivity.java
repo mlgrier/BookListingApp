@@ -137,8 +137,7 @@ public class MainActivity extends AppCompatActivity {
         private URL createUrl(String searchTerm) {
             /**
              * TODO Possibly change this into just books/v1/ and allow for the variation of
-             * Author/title/publisher searches? Might be complex. We'll see! We can have a search
-             * selection method sort of possibility perhaps??? Dunno...
+             * Author/title/publisher searches?
              */
             String baseUrl = "https://www.googleapis.com/books/v1/volumes?q=";
             String completeUrl = baseUrl + searchTerm.replace(" ", "20%") + API_KEY;
@@ -273,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.v(LOG_TAG, title + " " + author + " " + publisher + " " + rating + " " +
                             category + " " + picture);
-                    books.add(new Book(title, author, publisher, rating, category, picture));
+                    books.add(new Book(rating, title, author, publisher, category, picture));
 
                 }
 

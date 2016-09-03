@@ -1,6 +1,6 @@
 package com.mlgrier.booklistingapp;
 
-import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +22,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
     // context is the current context (i.e. Activity) that the adapter is being created in
     // detail is the list of detail to be displayed.
     // colorResourceId is the resource ID for the background color for this list of detail
-    public BookAdapter(Activity context, ArrayList<Book> books) {
+    public BookAdapter(Context context, ArrayList<Book> books) {
         super(context, 0, books);
 
     }
