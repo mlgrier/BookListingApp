@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Book> tempBookArrayList = null;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,8 +57,9 @@ public class MainActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //storing the text in a string called userBookSearch
-                userBookSearch = userInput.getText().toString();
+                //storing the text in a string called userBookSearch/ .replaceAll,
+                //added to be able to search for multiple words
+                userBookSearch = userInput.getText().toString().replaceAll(" ", "+");
                 //Logging the search term the user entered
                 Log.v(LOG_TAG, userBookSearch);
                 //if user doesn't enter a search term a toast will show,
