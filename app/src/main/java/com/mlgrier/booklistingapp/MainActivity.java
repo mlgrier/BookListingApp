@@ -103,9 +103,7 @@ public class MainActivity extends AppCompatActivity {
         protected ArrayList<Book> doInBackground(URL... urls) {
 
             URL url = null;
-            /**
-             * TODO Figure out why this stuff is acting strange
-             */
+
 
             url = createUrl(userBookSearch.trim());
 
@@ -135,10 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         private URL createUrl(String searchTerm) {
-            /**
-             * TODO Possibly change this into just books/v1/ and allow for the variation of
-             * Author/title/publisher searches?
-             */
+
             String baseUrl = "https://www.googleapis.com/books/v1/volumes?q=";
             String completeUrl = baseUrl + searchTerm.replace(" ", "20%") + API_KEY;
             URL url = null;
