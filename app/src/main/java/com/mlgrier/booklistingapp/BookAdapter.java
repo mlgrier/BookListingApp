@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by mlgrier on 9/1/16.
  */
@@ -27,10 +28,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
 
     }
 
-
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         // check if there is an existing list item view (called convertView) that we can reuse,
         //otherwise, if convertView is null, then inflate a new list item layout.
         View listItemView = convertView;
@@ -67,6 +67,5 @@ public class BookAdapter extends ArrayAdapter<Book> {
         return listItemView;
 
     }
-
 
 }

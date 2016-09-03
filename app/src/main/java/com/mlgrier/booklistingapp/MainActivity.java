@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -40,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    static class ViewHolderItem {
+        ImageView bookImage;
+        TextView bookTitle;
+        TextView bookAuthor;
+        TextView bookPublisher;
+        TextView bookCategory;
+        RatingBar bookRating;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 if (userBookSearch.trim().length() <= 0 || userBookSearch.length() <= 0) {
                     Toast.makeText(getApplicationContext(), "No Search Entered", Toast.LENGTH_LONG).show();
                     Log.e(LOG_TAG, "Error Response code: No Search Given");
-                //if a search term is entered continue with task and log search term
+                    //if a search term is entered continue with task and log search term
                 } else {
                     Log.v(LOG_TAG, userBookSearch);
                     BookAsyncTask task = new BookAsyncTask();
